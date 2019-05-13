@@ -52,7 +52,7 @@ public void test() throws GeneralLeanFtException {
                 .name("Google Search")
                 .tagName("INPUT").build());
         googleSearchButton.click();
-        System.out.println("clicked search button");
+        System.out.println("clicked search button.. GIT version 2 update test");
     }
     catch(Exception ex)
     {
