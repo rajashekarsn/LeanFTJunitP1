@@ -1,43 +1,40 @@
 package com.company;
 
-import com.hp.lft.sdk.internal.web.WebButton;
 import com.hp.lft.sdk.web.*;
 import org.junit.*;
 import com.hp.lft.sdk.*;
-import com.hp.lft.verifications.*;
-
 import unittesting.*;
 
 public class LeanFtTest extends UnitTestClassBase {
 
-public LeanFtTest() {
+    public LeanFtTest() {
     //Change this constructor to private if you supply your own public constructor
-}
+    }
 
-@BeforeClass
-public static void setUpBeforeClass() throws Exception {
+    @BeforeClass
+    public static void setUpBeforeClass() throws Exception {
     instance = new LeanFtTest();
     globalSetup(LeanFtTest.class);
-}
+    }
 
-@AfterClass
-public static void tearDownAfterClass() throws Exception {
+    @AfterClass
+    public static void tearDownAfterClass() throws Exception {
     globalTearDown();
-}
+    }
 
-Browser browser;
-@Before
-public void setUp() throws Exception {
+    Browser browser;
+    @Before
+    public void setUp() throws Exception {
     browser = BrowserFactory.launch(BrowserType.CHROME);
-}
+    }
 
-@After
-public void tearDown() throws Exception {
+    @After
+    public void tearDown() throws Exception {
     browser.close();
-}
+    }
 
-@Test
-public void test() throws GeneralLeanFtException {
+    @Test
+    public void test() throws GeneralLeanFtException {
     try{
         browser.navigate("www.google.com");
         EditField GSearch = browser.describe(EditField.class, new EditFieldDescription.Builder().name("q").build());
