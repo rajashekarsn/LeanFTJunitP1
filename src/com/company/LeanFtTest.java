@@ -30,7 +30,7 @@ public class LeanFtTest extends UnitTestClassBase {
 
     @After
     public void tearDown() throws Exception {
-    browser.close();
+    //browser.close();
     }
 
     @Test
@@ -50,6 +50,16 @@ public class LeanFtTest extends UnitTestClassBase {
                 .tagName("INPUT").build());
         googleSearchButton.click();
         System.out.println("clicked search button.. GIT version 2 update test");
+        Thread.sleep(3000);
+
+        WebElement learn2AutomateWebElement = browser.describe(WebElement.class, new WebElementDescription.Builder()
+                .innerText("Learn2Automate – Eat…Sleep…Automate…REPEAT !")
+                .tagName("H3").build());
+
+        Assert.assertTrue("Result with text - \"learn2automate\" should be present",learn2AutomateWebElement.exists(10));
+        System.out.println("print after assert is read");
+        learn2AutomateWebElement.click();
+
     }
     catch(Exception ex)
     {
