@@ -64,7 +64,7 @@ public class LeanFtTest extends UnitTestClassBase {
     catch(Exception ex)
     {
         ex.printStackTrace();
-        Assert.fail("Unexpected error while looking for LeanFT on Learn2Automate - " + ex.getMessage());
+        Assert.fail("Unexpected error while looking for LeanFT on Learn2Automate.. - " + ex.getMessage());
     }
     }
 }
